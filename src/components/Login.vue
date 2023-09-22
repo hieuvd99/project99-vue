@@ -76,13 +76,8 @@
         this.loading = true;
   
         this.$store.dispatch("auth/login", user).then(
-          (response) => {
+          () => {
             this.$router.push("/profile");
-            if (response.data.accessToken) {
-              window.localStorage.clear();
-              window.localStorage.setItem("jwtToken", response.data.accessToken);
-              console.log("AAAAAAAAA: " + window.localStorage.getItem("jwtToken"));
-            }
           },
           (error) => {
             this.loading = false;
