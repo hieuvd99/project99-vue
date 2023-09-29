@@ -1,17 +1,21 @@
-import dashboard from '@/components/learns/spring/common/DashboardSpring.vue'
+import DashboardSpring from '@/components/learns/spring/common/DashboardSpring.vue'
 
 const routes =  [
   {
     path: '/learn/spring',
-    component: dashboard,
+    component: DashboardSpring,
     children: [
       {
-        path: '/learn/spring/overview',
-        component: () => import(/* webpackChunkName: "Overview" */ '@/components/learns/spring/course/Overview.vue')
+        path: '/learn/spring/',
+        component: () => import('@/components/learns/spring/course/OverviewSpring.vue')
       },
       {
         path: '/learn/spring/messages',
-        component: () => import(/* webpackChunkName: "Messages" */ '../components/learns/spring/course/Messages.vue')
+        component: () => import('../components/learns/spring/course/Messages.vue')
+      },
+      {
+        path: '/learn/spring/messages',
+        component: () => import('../components/learns/spring/course/Messages.vue')
       }
     ]
   }

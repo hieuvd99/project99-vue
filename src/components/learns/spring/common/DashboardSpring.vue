@@ -22,14 +22,12 @@ export default {
 <style>
 .dashboard {
     display: flex;
-    background-color: teal;
-    height: calc(100vh - 56px);
+    margin-top: 55px;
     width: 100vw;
 }
 
 .content {
-    background-color: white;
-    width: calc(100% - 250px);
-    padding-left: 30px;
+    background-color: #fff;
+    margin-left: 250px;
 }
 </style>

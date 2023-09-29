@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <nav class="navbar navbar-expand navbar-dark bg-dark header">
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
           <router-link to="/home" class="nav-link">
@@ -51,6 +51,7 @@
     <div>
       <router-view />
     </div>
+
   </div>
 </template>
 
@@ -76,3 +77,18 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.footer {
+  background-color: #000;
+}
+.copyright {
+  color: #fff;
+}
+</style>
