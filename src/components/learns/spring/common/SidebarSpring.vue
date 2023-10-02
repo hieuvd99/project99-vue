@@ -1,12 +1,17 @@
 <template>
     <div class="sidebar">
-        <div class="title">Spring</div>
+        <div class="title">
+            <router-link to="/learn/spring">Spring</router-link>
+        </div>
         <div class="menu-items">
-            <router-link to="/learn/spring/overview" active-class="active"  exact class="side-btn">
-                <div class="link-container">Overview</div>
+            <router-link to="/learn/spring/modules" active-class="active"  exact class="side-btn">
+                <div class="link-container">Modules</div>
             </router-link>
-            <router-link to="/learn/spring/messages" active-class="active" exact class="side-btn">
-                <div class="link-container">Messages</div>
+            <router-link to="/learn/spring/mvc" active-class="active" exact class="side-btn">
+                <div class="link-container">MVC</div>
+            </router-link>
+            <router-link to="/learn/spring/annotation" active-class="active" exact class="side-btn">
+                <div class="link-container">Annotation</div>
             </router-link>
         </div>
     </div>
@@ -29,46 +34,38 @@ export default {
     color: white;
     font-size: 24px;
     margin-top: 10px;
+    text-align: center;
 }
 .menu-items {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
-    margin-left: 6px;
+    margin-top: 15px;
+    margin-left: 10px;
 }
 .side-btn {
     border: none;
-    padding: 16px 0px;
+    padding: 10px 0px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
     color: white;
     background-color: transparent;
+    text-decoration: none;
 }
 .side-btn:focus {
     outline: none;
 }
 .side-btn.active {
     position: relative;
-    background-color: white;
-    color: teal;
+    background-color: #fff;
+    color: #000;
     font-weight: 600;
-    margin-left: 10px;
-    border-radius: 30px 0 0 30px;
 }
 .side-btn.active::before {
     top: -30px;
 }
 .side-btn.active::after {
     bottom: -30px;
-}
-.side-btn.active::before, .side-btn.active::after {
-    position: absolute;
-    content: "";
-    right: 0;
-    height: 30px;
-    width: 30px;
-    background-color: white;
 }
 .side-btn.active .link-container::before {
     top: -60px;
@@ -77,13 +74,5 @@ export default {
     bottom: -60px;
     z-index: 99;
 }
-.side-btn.active .link-container::before, .side-btn.active .link-container::after {
-    position: absolute;
-    content: "";
-    right: 0px;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-color: teal;
-}
+
 </style>

@@ -146,8 +146,11 @@ a {
     text-align: justify;
 }
 .title-child {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 .text-content p {
   margin: 10px 0;
+}
+.image-content-course {
+  text-align: center;
 }

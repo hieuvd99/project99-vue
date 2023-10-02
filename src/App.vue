@@ -48,7 +48,7 @@
       </div>
     </nav>
 
-    <div>
+    <div class="content-router-app">
       <router-view />
     </div>
 
@@ -90,5 +90,8 @@ export default {
 }
 .copyright {
   color: #fff;
+}
+.content-router-app {
+  margin-top: 55px;
 }
 </style>

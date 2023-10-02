@@ -27,6 +27,7 @@ export default {
 }
 
 .content {
+    width: 100%;
     background-color: #fff;
     margin-left: 250px;
 }

@@ -10,12 +10,16 @@ const routes =  [
         component: () => import('@/components/learns/spring/course/OverviewSpring.vue')
       },
       {
-        path: '/learn/spring/messages',
-        component: () => import('../components/learns/spring/course/Messages.vue')
+        path: '/learn/spring/modules',
+        component: () => import('@/components/learns/spring/course/Modules.vue')
       },
       {
-        path: '/learn/spring/messages',
-        component: () => import('../components/learns/spring/course/Messages.vue')
+        path: '/learn/spring/mvc',
+        component: () => import('../components/learns/spring/course/MVC.vue')
+      },
+      {
+        path: '/learn/spring/annotation',
+        component: () => import('../components/learns/spring/course/Annotation.vue')
       }
     ]
   }

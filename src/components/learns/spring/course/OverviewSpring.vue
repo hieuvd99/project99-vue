@@ -60,7 +60,9 @@
 
         <h5 class="title-child">Aspect Oriented Programming (AOP)</h5>
         <div class="text-content">
-
+            <p>Chia thành các module riêng lẻ, không phụ thuộc vào nhau.</p>
+            <p>Ví dụ: Thay vì mỗi hàm đều viết log riêng thì viết một hàm log chung, mỗi hàm chỉ gần gọi lại nó khi sử dụng, muốn sửa log thì chỉ cần sửa hàm log thôi.</p>
+            <p>Ưu điểm: Code rõ ràng, tái sử dụng.</p>
         </div>
     </div>
 </template>
