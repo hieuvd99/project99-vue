@@ -1,7 +1,19 @@
 <template>
     <div class="content-course">
         <h1 class="title-content-course">Annotation</h1>
-        <p class="text-content">Một số annotation hay gặp.</p>
+
+        <h5 class="title-child">Vòng Đời của Bean</h5>
+        <div class="text-content">
+            <div class="image-content-course">
+                <img style="width: 100%;" src="@/assets/image/learns/spring/bean.png">
+            </div>
+            <ul style="list-style:auto;">
+                <li>Khi class được đánh dấu annotation, IoC sẽ tìm và khởi tạo.</li>
+                <li>Thực hiện các quá trình cài đặt, setter cho Bean</li>
+                <li>Đánh dấu @PostConstruct</li>
+                <li>Nếu không dùng Bean nữa, gọi @PreDestroy sau đó Bean bị xóa</li>
+            </ul>
+        </div>
 
         <h5 class="title-child"><code>@Override</code></h5>
         <div class="text-content">
@@ -121,6 +133,50 @@
     <span style="color:rgb(136, 174, 206); font-weight:400;">@Bean</span>
     <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span class="hljs-title class_">MyBean</span> <span class="hljs-title function_" style="color: rgb(240, 141, 73);">myBean</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>) {
         <span style="color:rgb(136, 174, 206); font-weight:400;">return</span> <span style="color:rgb(136, 174, 206); font-weight:400;">new</span> <span class="hljs-title class_">MyBean</span>();
+    }
+}</code></pre>
+        </div>
+
+        <h5 class="title-child"><code>@ComponentScan</code></h5>
+        <div class="text-content">
+            <p>Sử dụng @ComponentScan trên class để chỉ định các package cần quét.</p>
+<pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@ComponentScan</span>(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;me.kungfutech.spring.componentscan.others&quot;</span>)
+<span style="color:rgb(136, 174, 206); font-weight:400;">@SpringBootApplication</span>
+<span style="color:rgb(136, 174, 206); font-weight:400;">public class</span> <span style="color:rgb(240, 141, 73)">App</span> {
+    <span style="color:rgb(153, 153, 153); font-weight:400;">// something</span>
+}</code></pre>
+        </div>
+
+        <h5 class="title-child"><code>@Value</code></h5>
+        <div class="text-content">
+            <p>@Value dùng để đọc giá trị khác bên ngoài như application.properties.</p>
+<pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(153, 153, 153); font-weight:400;">//=====application.properties file==========</span>
+kungfutech.mysql.url=jdbc:mysql:<span style="color:rgb(153, 153, 153); font-weight:400;">//host1:33060/kungfutech</span>
+
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">AppConfig</span> {
+    <span style="color:rgb(153, 153, 153); font-weight:400;">// Lấy giá trị cấu hình từ file application.properties</span>
+    <span style="color:rgb(136, 174, 206); font-weight:400;">@Value(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;<span class="hljs-subst">${kungfutech.mysql.url}</span>&quot;</span>)</span>
+    <span style="color:rgb(136, 174, 206); font-weight:400;">private</span> String mysqlUrl;
+}</code></pre>
+        </div>
+
+        <h5 class="title-child"><code>@PostConstruct - @PreDestroy</code></h5>
+        <div class="text-content">
+            <p><b>@PostConstruct</b>: Gọi method sau khi Bean được tạo.</p>
+<pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@Component</span>
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Girl</span> {
+    <span style="color:rgb(136, 174, 206); font-weight:400;">@PostConstruct</span>
+    <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(240, 141, 73); font-weight:400;">void</span> <span class="hljs-title function_">postConstruct</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>){
+        <span class="hljs-title class_">System</span>.<span style="color:rgb(255, 255, 255); font-weight:400;">out</span>.<span class="hljs-title function_">println</span>(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;\t&gt;&gt; Đối tượng Girl sau khi khởi tạo xong sẽ chạy hàm này&quot;</span>);
+    }
+}</code></pre>
+
+            <p><b>@PreDestroy</b>: Gọi method trước khi Bean bị xóa.</p>
+<pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@Component</span>
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Girl</span> {
+    <span style="color:rgb(136, 174, 206); font-weight:400;">@PreDestroy</span>
+    <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(240, 141, 73); font-weight:400;">void</span> <span class="hljs-title function_">preDestroy</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>){
+        <span class="hljs-title class_">System</span>.<span style="color:rgb(255, 255, 255); font-weight:400;">out</span>.<span class="hljs-title function_">println</span>(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;\t&gt;&gt; Đối tượng Girl trước khi bị destroy thì chạy hàm này&quot;</span>);
     }
 }</code></pre>
         </div>

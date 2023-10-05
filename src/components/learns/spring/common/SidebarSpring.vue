@@ -13,6 +13,9 @@
             <router-link to="/learn/spring/annotation" active-class="active" exact class="side-btn">
                 <div class="link-container">Annotation</div>
             </router-link>
+            <router-link to="/learn/spring/spring-jpa" active-class="active" exact class="side-btn">
+                <div class="link-container">Spring JPA</div>
+            </router-link>
         </div>
     </div>
 </template>
@@ -40,7 +43,6 @@ export default {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
-    margin-left: 10px;
 }
 .side-btn {
     border: none;
@@ -66,6 +68,9 @@ export default {
 }
 .side-btn.active::after {
     bottom: -30px;
+}
+.side-btn .link-container {
+    padding-left: 10px;
 }
 .side-btn.active .link-container::before {
     top: -60px;
