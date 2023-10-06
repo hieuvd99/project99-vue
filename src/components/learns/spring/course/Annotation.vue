@@ -23,7 +23,7 @@
         System.<span style="color:rgb(136, 174, 206); font-weight:400;">out</span>.println(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;Animal makes a sound&quot;</span>);
     }
 }
-<span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color:rgb(240, 141, 73); font-weight:400;">Dog</span> <span style="color:rgb(240, 141, 73); font-weight:400;">extends</span> <span style="color:rgb(240, 141, 73); font-weight:400;">Animal</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color:rgb(240, 141, 73); font-weight:400;">Dog</span> <span style="font-weight:400;">extends</span> <span style="color:rgb(240, 141, 73); font-weight:400;">Animal</span> {
     @Override
     <span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(136, 174, 206); font-weight:400;">void</span> <span style="color:rgb(240, 141, 73); font-weight:400;">makeSound</span>()</span> {
         System.<span style="color:rgb(136, 174, 206); font-weight:400;">out</span>.println(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;Dog barks&quot;</span>);
@@ -40,7 +40,7 @@
         <div class="text-content">
             <p>Dùng để tắt cảnh báo của trình biên dịch</p>
 <pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@SuppressWarnings(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;unused&quot;</span>)</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Example</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">Example</span> {
 
     <span style="color:rgb(136, 174, 206); font-weight:400;">@SuppressWarnings(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;deprecation&quot;</span>)</span>
     void useDeprecatedMethod() {
@@ -53,7 +53,7 @@
         <div class="text-content">
             <p>Đánh dấu trên class cho biết chúng được quản lý bởi IoC.</p>
 <pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@Component</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Bikini</span> <span style="color:rgb(136, 174, 206); font-weight:400;">implements</span> <span class="hljs-title class_">Outfit</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">Bikini</span> <span style="color:rgb(136, 174, 206); font-weight:400;">implements</span> <span style="color: #f08d49;">Outfit</span> {
     <span style="color:rgb(153, 153, 153); font-weight:400;">//something</span>
 }</code></pre>
         </div>
@@ -62,7 +62,7 @@
         <div class="text-content">
             <p>Dùng để tiêm các bean được lưu trữ ở IoC.</p>
 <pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@Component</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Girl</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">Girl</span> {
     <span style="color:rgb(136, 174, 206); font-weight:400;">@Autowired</span>
     Outfit outfit;
     <span style="color:rgb(153, 153, 153); font-weight:400;">// Các getter và setter</span>
@@ -74,7 +74,7 @@
             <p>Đánh dấu đây là bean được ưu tiên dùng.</p>
 <pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@Component</span>
 <span style="color:rgb(136, 174, 206); font-weight:400;">@Primary</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Naked</span> <span style="color:rgb(136, 174, 206); font-weight:400;">implements</span> <span class="hljs-title class_">Outfit</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">Naked</span> <span style="color:rgb(136, 174, 206); font-weight:400;">implements</span> <span style="color: #f08d49;">Outfit</span> {
     <span style="color:rgb(136, 174, 206); font-weight:400;">@Override</span>
     <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(240, 141, 73); font-weight:400;">void</span> <span class="hljs-title function_">wear</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>) {
         <span style="color:rgb(153, 153, 153); font-weight:400;">//something</span>
@@ -86,21 +86,21 @@
         <div class="text-content">
             <p>Chỉ định chính xác tên bean để dùng.</p>
 <pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@Component(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;bikini&quot;</span>)</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Bikini</span> <span style="color:rgb(240, 141, 73); font-weight:400;">implements</span> <span style="color:rgb(240, 141, 73); font-weight:400;">Outfit</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">Bikini</span> <span style="font-weight:400;">implements</span> <span style="color:rgb(240, 141, 73); font-weight:400;">Outfit</span> {
     <span style="color:rgb(136, 174, 206); font-weight:400;">@Override</span>
     <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> void wear() {
         System.<span style="color:rgb(136, 174, 206); font-weight:400;">out</span>.println(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;Mặc bikini&quot;</span>);
     }
 }
 <span style="color:rgb(136, 174, 206); font-weight:400;">@Component(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;naked&quot;</span>)</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Naked</span> <span style="color:rgb(240, 141, 73); font-weight:400;">implements</span> <span style="color:rgb(240, 141, 73); font-weight:400;">Outfit</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">Naked</span> <span style="font-weight:400;">implements</span> <span style="color:rgb(240, 141, 73); font-weight:400;">Outfit</span> {
     <span style="color:rgb(136, 174, 206); font-weight:400;">@Override</span>
     <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> void wear() {
         System.<span style="color:rgb(136, 174, 206); font-weight:400;">out</span>.println(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;Đang không mặc gì&quot;</span>);
     }
 }
 <span style="color:rgb(136, 174, 206); font-weight:400;">@Component</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Girl</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">Girl</span> {
     Outfit outfit;
     <span style="color:rgb(136, 174, 206); font-weight:400;">@Autowired</span>
     <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> Girl(<span style="color:rgb(136, 174, 206); font-weight:400;">@Qualifier(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;naked&quot;</span>)</span> Outfit outfit) {
@@ -129,10 +129,10 @@
             <p><b>@Configuration</b>: Đánh dấu trên class cho biết class đó chứa các thông tin cấu hình cho ứng dụng.</p>
             <p><b>@Bean</b>: Đánh dấu trên một method trong class được đánh dấu @Configuration, nó cho biết rằng method đó tạo và trả về một bean</p>
 <pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@Configuration</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_" style="color: rgb(240, 141, 73);">AppConfig</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: rgb(240, 141, 73);">AppConfig</span> {
     <span style="color:rgb(136, 174, 206); font-weight:400;">@Bean</span>
-    <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span class="hljs-title class_">MyBean</span> <span class="hljs-title function_" style="color: rgb(240, 141, 73);">myBean</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>) {
-        <span style="color:rgb(136, 174, 206); font-weight:400;">return</span> <span style="color:rgb(136, 174, 206); font-weight:400;">new</span> <span class="hljs-title class_">MyBean</span>();
+    <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span>MyBean</span> <span style="color: rgb(240, 141, 73);">myBean</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>) {
+        <span style="color:rgb(136, 174, 206); font-weight:400;">return</span> <span style="color:rgb(136, 174, 206); font-weight:400;">new</span> <span style="color: #f08d49;">MyBean</span>();
     }
 }</code></pre>
         </div>
@@ -153,10 +153,19 @@
 <pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(153, 153, 153); font-weight:400;">//=====application.properties file==========</span>
 kungfutech.mysql.url=jdbc:mysql:<span style="color:rgb(153, 153, 153); font-weight:400;">//host1:33060/kungfutech</span>
 
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">AppConfig</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">AppConfig</span> {
     <span style="color:rgb(153, 153, 153); font-weight:400;">// Lấy giá trị cấu hình từ file application.properties</span>
     <span style="color:rgb(136, 174, 206); font-weight:400;">@Value(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;<span class="hljs-subst">${kungfutech.mysql.url}</span>&quot;</span>)</span>
     <span style="color:rgb(136, 174, 206); font-weight:400;">private</span> String mysqlUrl;
+}</code></pre>
+        </div>
+
+        <h5 class="title-child"><code>@Query</code></h5>
+        <div class="text-content">
+            <p>Nếu muốn tại SQL riêng thì sử dụng annotation <code>@Query</code></p>
+<pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">interface</span> <span style="color: #f08d49;">UserRepository</span> <span style="color:rgb(136, 174, 206); font-weight:400;">extends</span> <span style="color: #f08d49;">JpaRepository</span>&lt;User, Long&gt; {
+    <span style="color:rgb(136, 174, 206); font-weight:400;">@Query(&quot;SELECT u FROM User u WHERE u.atk = :atk&quot;)</span>
+    List&lt;User&gt; <span style="color: #f08d49;">findUsersWithAtk</span><span style="color:rgb(255, 255, 255); font-weight:400;">(<span style="color:rgb(136, 174, 206); font-weight:400;">@Param(&quot;atk&quot;)</span> <span style="color:rgb(240, 141, 73); font-weight:400;">int</span> atk)</span>;
 }</code></pre>
         </div>
 
@@ -164,19 +173,19 @@ kungfutech.mysql.url=jdbc:mysql:<span style="color:rgb(153, 153, 153); font-weig
         <div class="text-content">
             <p><b>@PostConstruct</b>: Gọi method sau khi Bean được tạo.</p>
 <pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@Component</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Girl</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">Girl</span> {
     <span style="color:rgb(136, 174, 206); font-weight:400;">@PostConstruct</span>
     <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(240, 141, 73); font-weight:400;">void</span> <span class="hljs-title function_">postConstruct</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>){
-        <span class="hljs-title class_">System</span>.<span style="color:rgb(255, 255, 255); font-weight:400;">out</span>.<span class="hljs-title function_">println</span>(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;\t&gt;&gt; Đối tượng Girl sau khi khởi tạo xong sẽ chạy hàm này&quot;</span>);
+        <span>System</span>.<span style="color:rgb(255, 255, 255); font-weight:400;">out</span>.<span class="hljs-title function_">println</span>(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;\t&gt;&gt; Đối tượng Girl sau khi khởi tạo xong sẽ chạy hàm này&quot;</span>);
     }
 }</code></pre>
 
             <p><b>@PreDestroy</b>: Gọi method trước khi Bean bị xóa.</p>
 <pre><code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(28, 27, 27);background:rgb(28, 27, 27);display:block;padding: .5em;"><span style="color:rgb(136, 174, 206); font-weight:400;">@Component</span>
-<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span class="hljs-title class_">Girl</span> {
+<span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(136, 174, 206); font-weight:400;">class</span> <span style="color: #f08d49;">Girl</span> {
     <span style="color:rgb(136, 174, 206); font-weight:400;">@PreDestroy</span>
     <span style="color:rgb(136, 174, 206); font-weight:400;">public</span> <span style="color:rgb(240, 141, 73); font-weight:400;">void</span> <span class="hljs-title function_">preDestroy</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>){
-        <span class="hljs-title class_">System</span>.<span style="color:rgb(255, 255, 255); font-weight:400;">out</span>.<span class="hljs-title function_">println</span>(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;\t&gt;&gt; Đối tượng Girl trước khi bị destroy thì chạy hàm này&quot;</span>);
+        <span>System</span>.<span style="color:rgb(255, 255, 255); font-weight:400;">out</span>.<span class="hljs-title function_">println</span>(<span style="color:rgb(181, 189, 104); font-weight:400;">&quot;\t&gt;&gt; Đối tượng Girl trước khi bị destroy thì chạy hàm này&quot;</span>);
     }
 }</code></pre>
         </div>
