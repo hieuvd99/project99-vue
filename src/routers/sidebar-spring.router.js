@@ -26,6 +26,11 @@ const routes =  [
         path: '/learn/spring/spring-jpa',
         component: () => import('../components/learns/spring/course/SpringJPA.vue')
       }
+      ,
+      {
+        path: '/learn/spring/relationship',
+        component: () => import('../components/learns/spring/course/Relationship.vue')
+      }
     ]
   }
 ]

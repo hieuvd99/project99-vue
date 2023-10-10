@@ -3,6 +3,7 @@
         <Sidebar/>
         <div class="content">
             <router-view/>
+            <br/><br/><br/>
         </div>
     </div>
 </template>

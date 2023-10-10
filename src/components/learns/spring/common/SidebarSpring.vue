@@ -16,6 +16,9 @@
             <router-link to="/learn/spring/spring-jpa" active-class="active" exact class="side-btn">
                 <div class="link-container">Spring JPA</div>
             </router-link>
+            <router-link to="/learn/spring/relationship" active-class="active" exact class="side-btn">
+                <div class="link-container">Relationship</div>
+            </router-link>
         </div>
     </div>
 </template>
