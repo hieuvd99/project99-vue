@@ -21,10 +21,16 @@
       <ul>
         <li v-for="role in currentUser.roles" :key="role">{{role}}</li>
       </ul>
+
+      <strong>Address</strong>
+
+
     </div>
   </template>
   
   <script>
+  import ProfileService from '@/services/profile.service';
+
   export default {
     name: 'Profile',
     computed: {
@@ -36,6 +42,22 @@
       if (!this.currentUser) {
         this.$router.push('/login');
       }
+    },
+    data() {
+        return {           
+            id:'',            
+            addressData:{}
+        };
+    }, 
+    methods:{
+        onUpdateAddress() {
+            console.log("inside update")
+            ProfileService.updateAddress(this.addressData)
+                    .then((response)=>{
+                        console.log(" then" ,response);
+                        this.$router.push('/profile')
+            });
+        }
     }
   };
   </script>
