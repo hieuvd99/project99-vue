@@ -101,8 +101,8 @@
         this.loading = true;
   
         this.$store.dispatch("auth/register", user).then(
-          (data) => {
-            this.message = data.message;
+          (response) => {
+            this.message = response.message;
             this.successful = true;
             this.loading = false;
           },

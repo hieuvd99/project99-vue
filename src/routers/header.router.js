@@ -4,7 +4,7 @@ import Login from "../components/Login.vue";
 import Register from "../components/Register.vue";
 // lazy-loaded
 const Profile = () => import("../components/Profile.vue")
-const BoardAdmin = () => import("../components/admin/BoardAdmin.vue")
+const BoardAdmin = () => import("@/components/admin/BoardAdmin.vue")
 const BoardUser = () => import("../components/BoardUser.vue")
 const Learn = () => import("@/components/learns/common/Learn.vue")
 

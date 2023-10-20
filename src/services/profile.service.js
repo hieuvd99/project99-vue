@@ -10,6 +10,7 @@ class ProfileService {
         let URL = API_URL_Profile + '/address';
         return axios.put(URL, address)
     }
+
 }
 
 export default new ProfileService()
