@@ -30,6 +30,14 @@ const routes =  [
       {
         path: '/learn/spring/relationship',
         component: () => import('../components/learns/spring/course/Relationship.vue')
+      },
+      {
+        path: '/learn/spring/pageable',
+        component: () => import('../components/learns/spring/course/Pageable.vue')
+      },
+      {
+        path: '/learn/spring/spring-security',
+        component: () => import('../components/learns/spring/course/SpringSecurity.vue')
       }
     ]
   }

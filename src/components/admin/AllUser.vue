@@ -6,6 +6,13 @@
           {{ message }}
         </div>
       </div>
+      <h5>Số tài khoản: {{pages.totalElements}}</h5>
+
+      <form @submit.prevent="onUserSearch">
+        <input type="text"  placeholder="search" v-model="valueSearch">
+        <input type="submit" value="Submit">
+      </form> 
+
       <table class="table table-striped">
         <thead>
             <th>User Id</th>
@@ -16,7 +23,7 @@
             <th>Detele</th>
         </thead>
         <tbody>
-          <tr v-for="user in users" :key="user.id">
+          <tr v-for="user in pages.content" :key="user.id">
             <td><router-link :to="'/admin/user/'+ user.id">{{user.id}} </router-link></td> 
             <td>{{user.username}}</td>
             <td>{{user.email}}</td>
@@ -32,6 +39,27 @@
           </tr>
         </tbody>
 
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <!-- First -->
+            <li  class="page-item text-primary">
+              <a href="/admin/all-user?page=1" v-bind:class="{disable: isDisablePrevious}" class="page-link" style="font-size: 14px;"> First </a>
+            </li>
+            <!-- Previous -->
+            <li  class="page-item text-primary">
+              <a v-bind:href="'/admin/all-user?page=' + ((pages.number > 1) ? (pages.number-1) : 1)" v-bind:class="{disable: isDisablePrevious}" class="page-link" style="font-size: 14px;">Previous </a>
+            </li>
+            <!-- Next -->
+            <li class="page-item text-primary">
+              <a v-bind:href="'/admin/all-user?page=' + (pages.number+2)" v-bind:class="{disable: isDisableNext}" class="page-link" style="font-size: 14px;">Next </a>
+            </li>
+            <!-- Last -->
+            <li  class="page-item text-primary">
+              <a v-bind:href="'/admin/all-user?page=' + ((pages.totalPages > 1) ? (pages.totalPages-1) : 1)" v-bind:class="{disable: isDisableNext}" class="page-link" style="font-size: 14px;">Last </a>
+            </li>
+          </ul>
+        </nav>
+
       </table>
       <br>
   </div>
@@ -43,17 +71,24 @@ export default {
   name:'Employee',
   data() {
     return {
-      users: [],
+      pages: [],
       message: "",
-      
-     
+      isDisablePrevious: false,
+      isDisableNext: false,
+      valueSearch: "",
     };
   },
   methods: {
-    getUsers() {
-      AdminService.getAllUser().then (
+    getUsers(page) {
+      AdminService.getAllUser(page).then (
         response => {
-          this.users = response.data;
+          this.pages = response.data;
+          if (this.pages.number == 0) {
+            this.isDisablePrevious = true;
+          }
+          if (this.pages.number + 1 == this.pages.totalPages) {
+            this.isDisableNext = true;
+          }
         }
       );
     },
@@ -66,14 +101,39 @@ export default {
             }
         );
       }
+    },
+    onUserSearch() {
+      AdminService.searchUser(this.valueSearch).then(
+          (response) => {
+              this.message = response.data.message;
+              this.pages = response.data;
+              if (this.pages.number == 0) {
+                this.isDisablePrevious = true;
+              }
+              if (this.pages.number + 1 == this.pages.totalPages) {
+                this.isDisableNext = true;
+              }
+          }
+      );
     }
   },
   created() {
-      this.getUsers()
+    var paramPage = 1;
+    if (this.$route.query.page != null) {
+      paramPage = this.$route.query.page;
+    }
+    this.getUsers(paramPage - 1)
+
   }
 }
 
 </script>
 
+<style scoped>
+.disable {
+  background-color: #dee2e6;
+  pointer-events: none;
+}
+</style>
 
 

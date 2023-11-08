@@ -21,7 +21,10 @@
             </div>
             <div class="form-group">
                 <label>ROLE</label>
-                <input type=text class="form-control" v-model="userInfo.role">
+                <select class="form-control" v-model="userInfo.role">
+                    <option value="ROLE_ADMIN">ROLE_ADMIN</option>
+                    <option value="ROLE_USER">ROLE_USER</option>
+                </select>
             </div>    
         
             <button type="submit" class="mt-3">Update</button>

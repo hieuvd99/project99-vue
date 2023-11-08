@@ -3,8 +3,8 @@ import axios from 'axios'
 const API_URL_Admin='http://localhost:9999/api/admin'
 
 class AdminService {
-    getAllUser() {
-        return axios.get(API_URL_Admin + '/all-user')
+    getAllUser(page) {
+        return axios.get(API_URL_Admin + '/all-user?p=' + page)
     }
     getUserById(id) {
         let URL = API_URL_Admin + '/user/' + id;
@@ -17,6 +17,9 @@ class AdminService {
     deleteUser(id) {
         let URL = API_URL_Admin + '/delete-user/' + id;
         return axios.get(URL)
+    }
+    searchUser(paramSearch) {
+        return axios.get(API_URL_Admin + '/search?search=' + paramSearch)
     }
 }
 

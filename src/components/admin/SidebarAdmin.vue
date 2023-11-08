@@ -4,7 +4,7 @@
             Admin
         </div>
         <div class="menu-items">
-            <router-link to="/admin/all-user" active-class="active"  exact class="side-btn">
+            <router-link to="/admin/all-user?page=1" active-class="active"  exact class="side-btn">
                 <div class="link-container">All user</div>
             </router-link>
         </div>

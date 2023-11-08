@@ -19,7 +19,7 @@ import Sidebar from '@/components/admin/SidebarAdmin.vue'
   }
   </script>
 
-<style>
+<style scoped>
 .dashboard {
     display: flex;
     margin-top: 55px;

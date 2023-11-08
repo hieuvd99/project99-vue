@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .dashboard {
     display: flex;
     margin-top: 55px;

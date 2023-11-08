@@ -19,6 +19,12 @@
             <router-link to="/learn/spring/relationship" active-class="active" exact class="side-btn">
                 <div class="link-container">Relationship</div>
             </router-link>
+            <router-link to="/learn/spring/pageable" active-class="active" exact class="side-btn">
+                <div class="link-container">Pageable</div>
+            </router-link>
+            <router-link to="/learn/spring/spring-security" active-class="active" exact class="side-btn">
+                <div class="link-container">Spring Security</div>
+            </router-link>
         </div>
     </div>
 </template>

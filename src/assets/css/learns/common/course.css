@@ -154,3 +154,11 @@ a {
 .image-content-course {
   text-align: center;
 }
+
+/* highlight code */
+.hljs-title {
+  color: #f08d49;
+}
+.hljs-variable {
+  color: #b5bd68;
+}

@@ -3,6 +3,13 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark header">
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
+          <div class="current-time-area">
+            <font-awesome-icon icon="clock"/><span id="current-time">{{currentTime}}</span>
+          </div>
+        </li>
+      </div>
+      <div class="navbar-nav mr-auto">
+        <li class="nav-item">
           <router-link to="/home" class="nav-link">
             <font-awesome-icon icon="home" /> Home
           </router-link>
@@ -57,6 +64,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      currentTime: new Date().toLocaleTimeString()
+    };
+  },
   computed: {
     currentUser() {
       return this.$store.state.auth.user;
@@ -74,6 +86,12 @@ export default {
       this.$store.dispatch('auth/logout');
       this.$router.push('/login');
     }
+  },
+  created() {
+    setInterval(() => {
+      this.currentTime = new Date().toLocaleTimeString();
+    }, 1000);
+
   }
 };
 </script>
@@ -93,5 +111,13 @@ export default {
 }
 .content-router-app {
   margin-top: 55px;
+}
+.current-time-area {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 22px;
+  padding: 0 10px;
+}
+.current-time-area span {
+  padding-left: 10px;
 }
 </style>
