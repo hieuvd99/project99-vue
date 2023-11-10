@@ -29,7 +29,6 @@
   </template>
   
   <script>
-  import ProfileService from '@/services/profile.service';
 
   export default {
     name: 'Profile',
@@ -42,22 +41,6 @@
       if (!this.currentUser) {
         this.$router.push('/login');
       }
-    },
-    data() {
-        return {           
-            id:'',            
-            addressData:{}
-        };
-    }, 
-    methods:{
-        onUpdateAddress() {
-            console.log("inside update")
-            ProfileService.updateAddress(this.addressData)
-                    .then((response)=>{
-                        console.log(" then" ,response);
-                        this.$router.push('/profile')
-            });
-        }
     }
   };
   </script>

@@ -8,9 +8,15 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/learn/vue">
+          <router-link to="/learn/vuejs">
             <img class="image-course" src="@/assets/image/learns/vuejs/vuejs.png">
             <p class="text-course">VueJS</p>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/learn/sql">
+            <img class="image-course" src="@/assets/image/learns/sql/sql.png">
+            <p class="text-course">SQL</p>
           </router-link>
         </li>
       </div>
