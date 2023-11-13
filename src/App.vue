@@ -10,8 +10,8 @@
       </div>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
-          <router-link to="/home" class="nav-link">
-            <font-awesome-icon icon="home" /> Home
+          <router-link to="/home" class="nav-link img-logo">
+            <img src="@/assets/image/common/logo/logo.png" title="Home">
           </router-link>
         </li>
         <li class="nav-item">
@@ -123,5 +123,11 @@ export default {
 .user-handle {
   justify-content: flex-end;
   flex-grow: 1;
+}
+.nav-link.img-logo {
+  padding: 0;
+}
+.nav-link.img-logo img {
+  height: 40px;
 }
 </style>

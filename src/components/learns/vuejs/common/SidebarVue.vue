@@ -4,8 +4,11 @@
             <router-link to="/learn/vuejs">VueJS</router-link>
         </div>
         <div class="menu-items">
-            <router-link to="s" active-class="active"  exact class="side-btn">
-                <div class="link-container">Modules</div>
+            <router-link to="/learn/vuejs/directive" active-class="active"  exact class="side-btn">
+                <div class="link-container">Directive (v-)</div>
+            </router-link>
+            <router-link to="/learn/vuejs/computed" active-class="active"  exact class="side-btn">
+                <div class="link-container">Computed</div>
             </router-link>
         </div>
     </div>
