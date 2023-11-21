@@ -123,6 +123,7 @@ export default {
 .user-handle {
   justify-content: flex-end;
   flex-grow: 1;
+  margin-right: 20px;
 }
 .nav-link.img-logo {
   padding: 0;

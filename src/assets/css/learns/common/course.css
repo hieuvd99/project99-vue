@@ -162,3 +162,10 @@ a {
 .hljs-variable {
   color: #b5bd68;
 }
+.name-table {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.name-table code {
+  font-size: 1.2em;
+}
