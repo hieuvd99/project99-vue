@@ -7,8 +7,8 @@
             <ul>
                 <li><p><code>INNER JOIN</code>: Trả về bản ghi có giá trị điều kiện giống nhau ở các bảng.</p></li>
                 <li><p><code>LEFT JOIN</code>: Trả về tất cả bản ghi ở bảng bên trái và bản ghi có giá trị điều kiện giống nhau ở các bảng.</p></li>
-                <li><p><code>INNER JOIN</code>: Trả về tất cả bản ghi ở bảng bên phải và bản ghi có giá trị điều kiện giống nhau ở các bảng.</p></li>
-                <li><p><code>INNER JOIN</code>: Trả về tất cả bản ghi của các bảng.</p></li>
+                <li><p><code>RIGHT JOIN</code>: Trả về tất cả bản ghi ở bảng bên phải và bản ghi có giá trị điều kiện giống nhau ở các bảng.</p></li>
+                <li><p><code>CROSS JOIN</code>: Trả về tất cả bản ghi của các bảng.</p></li>
             </ul>
             <img src="@/assets/image/learns/sql/join_type.png">
         </div>

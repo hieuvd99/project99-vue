@@ -2,6 +2,18 @@
     <div class="container-course">
       <div class="content">
         <li>
+          <router-link to="/learn/blog">
+            <img class="image-course" src="@/assets/image/learns/blog/blog.png">
+            <p class="text-course">Blog</p>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/learn/java">
+            <img class="image-course" src="@/assets/image/learns/java/java.png">
+            <p class="text-course">Java</p>
+          </router-link>
+        </li>
+        <li>
           <router-link to="/learn/spring" >
             <img class="image-course" src="@/assets/image/learns/spring/spring.png">
             <p class="text-course">Spring</p>
@@ -13,6 +25,8 @@
             <p class="text-course">VueJS</p>
           </router-link>
         </li>
+      </div>
+      <div class="content">
         <li>
           <router-link to="/learn/sql">
             <img class="image-course" src="@/assets/image/learns/sql/sql.png">

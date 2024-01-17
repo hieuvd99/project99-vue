@@ -1,17 +1,17 @@
 <template>
     <div class="sidebar">
         <div class="title">
-            <router-link to="/learn/sql">SQL</router-link>
+            <router-link to="/learn/java/">Java</router-link>
         </div>
         <div class="menu-items">
-            <router-link to="/learn/sql/joines" active-class="active"  exact class="side-btn">
-                <div class="link-container">Joines</div>
+            <router-link to="/learn/java/java-basic/" active-class="active" exact class="side-btn">
+                <div class="link-container">Java Basic</div>
             </router-link>
-            <router-link to="/learn/sql/other-statement" active-class="active"  exact class="side-btn">
-                <div class="link-container">Other Statement</div>
+            <router-link to="/learn/java/design-pattern/" active-class="active" exact class="side-btn">
+                <div class="link-container">Design Pattern</div>
             </router-link>
-            <router-link to="/learn/sql/data-types" active-class="active"  exact class="side-btn">
-                <div class="link-container">Data Types</div>
+            <router-link to="/learn/java/java8-lambda-expressions/" active-class="active" exact class="side-btn">
+                <div class="link-container">Java8 - Lambda Expressions</div>
             </router-link>
         </div>
     </div>

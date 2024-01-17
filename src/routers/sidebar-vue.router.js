@@ -2,7 +2,7 @@ import DashboardVue from '@/components/learns/vuejs/common/DashboardVue.vue'
 
 const routes =  [
   {
-    path: '/learn/vuejs',
+    path: '/learn/vuejs/',
     component: DashboardVue,
     children: [
       {

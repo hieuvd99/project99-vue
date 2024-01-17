@@ -1,17 +1,14 @@
 <template>
     <div class="sidebar">
         <div class="title">
-            <router-link to="/learn/sql">SQL</router-link>
+            <router-link to="/learn/blog">Blog</router-link>
         </div>
         <div class="menu-items">
-            <router-link to="/learn/sql/joines" active-class="active"  exact class="side-btn">
-                <div class="link-container">Joines</div>
+            <router-link to="/learn/blog/microservice" active-class="active" exact class="side-btn">
+                <div class="link-container">Microservice</div>
             </router-link>
-            <router-link to="/learn/sql/other-statement" active-class="active"  exact class="side-btn">
-                <div class="link-container">Other Statement</div>
-            </router-link>
-            <router-link to="/learn/sql/data-types" active-class="active"  exact class="side-btn">
-                <div class="link-container">Data Types</div>
+            <router-link to="/learn/blog/docker" active-class="active" exact class="side-btn">
+                <div class="link-container">Docker</div>
             </router-link>
         </div>
     </div>

@@ -2,7 +2,7 @@ import DashboardSpring from '@/components/learns/spring/common/DashboardSpring.v
 
 const routes =  [
   {
-    path: '/learn/spring',
+    path: '/learn/spring/',
     component: DashboardSpring,
     children: [
       {
