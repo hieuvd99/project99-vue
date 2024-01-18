@@ -21,10 +21,15 @@
       <ul>
         <li v-for="role in currentUser.roles" :key="role">{{role}}</li>
       </ul>
+
+      <strong>Address</strong>
+
+
     </div>
   </template>
   
   <script>
+
   export default {
     name: 'Profile',
     computed: {

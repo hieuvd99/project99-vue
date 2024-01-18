@@ -1,36 +1,35 @@
 <template>
-    <div class="container">
-      <header class="jumbotron">
-        <h3>{{ content }}</h3>
-      </header>
+    <div class="dashboard">
+        <Sidebar/>
+        <div class="content">
+            <router-view/>
+            <br/><br/><br/>
+        </div>
     </div>
   </template>
   
-  <script>
-  import UserService from "@/services/user.service";
+<script>
+import Sidebar from '@/components/admin/SidebarAdmin.vue'
   
   export default {
     name: "Admin",
-    data() {
-      return {
-        content: "",
-      };
-    },
-    mounted() {
-      UserService.getAdminBoard().then(
-        (response) => {
-          this.content = response.data;
-        },
-        (error) => {
-          this.content =
-            (error.response &&
-              error.response.data &&
-              error.response.data.message) ||
-            error.message ||
-            error.toString();
-        }
-      );
-    },
-  };
+    components: {
+        Sidebar
+    }
+  }
   </script>
+
+<style scoped>
+.dashboard {
+    display: flex;
+    margin-top: 55px;
+    width: 100vw;
+}
+
+.content {
+    width: 100%;
+    background-color: #fff;
+    margin-left: 250px;
+}
+</style>
   

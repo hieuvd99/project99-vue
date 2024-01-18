@@ -1,29 +1,17 @@
 <template>
     <div class="sidebar">
         <div class="title">
-            <router-link to="/learn/spring">Spring</router-link>
+            <router-link to="/learn/sql">SQL</router-link>
         </div>
         <div class="menu-items">
-            <router-link to="/learn/spring/modules" active-class="active"  exact class="side-btn">
-                <div class="link-container">Modules</div>
+            <router-link to="/learn/sql/joines" active-class="active"  exact class="side-btn">
+                <div class="link-container">Joines</div>
             </router-link>
-            <router-link to="/learn/spring/mvc" active-class="active" exact class="side-btn">
-                <div class="link-container">MVC</div>
+            <router-link to="/learn/sql/other-statement" active-class="active"  exact class="side-btn">
+                <div class="link-container">Other Statement</div>
             </router-link>
-            <router-link to="/learn/spring/annotation" active-class="active" exact class="side-btn">
-                <div class="link-container">Annotation</div>
-            </router-link>
-            <router-link to="/learn/spring/spring-jpa" active-class="active" exact class="side-btn">
-                <div class="link-container">Spring JPA</div>
-            </router-link>
-            <router-link to="/learn/spring/relationship" active-class="active" exact class="side-btn">
-                <div class="link-container">Relationship</div>
-            </router-link>
-            <router-link to="/learn/spring/pageable" active-class="active" exact class="side-btn">
-                <div class="link-container">Pageable</div>
-            </router-link>
-            <router-link to="/learn/spring/spring-security" active-class="active" exact class="side-btn">
-                <div class="link-container">Spring Security</div>
+            <router-link to="/learn/sql/data-types" active-class="active"  exact class="side-btn">
+                <div class="link-container">Data Types</div>
             </router-link>
         </div>
     </div>

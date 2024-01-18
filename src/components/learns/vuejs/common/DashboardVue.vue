@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Sidebar from '@/components/learns/spring/common/SidebarSpring.vue'
+import Sidebar from '@/components/learns/vuejs/common/SidebarVue.vue'
 
 export default {
     name: 'home',

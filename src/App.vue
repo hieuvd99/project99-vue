@@ -3,8 +3,15 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark header">
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
-          <router-link to="/home" class="nav-link">
-            <font-awesome-icon icon="home" /> Home
+          <div class="current-time-area">
+            <font-awesome-icon icon="clock"/><span id="current-time">{{currentTime}}</span>
+          </div>
+        </li>
+      </div>
+      <div class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <router-link to="/home" class="nav-link img-logo">
+            <img src="@/assets/image/common/logo/logo.png" title="Home">
           </router-link>
         </li>
         <li class="nav-item">
@@ -12,39 +19,39 @@
             <font-awesome-icon icon="book-open" /> Learn
           </router-link>
         </li>
+      </div>
+
+      <div class="navbar-nav ml-auto user-handle">
         <li v-if="showAdminBoard" class="nav-item">
           <router-link to="/admin" class="nav-link">Admin Board</router-link>
         </li>
-        <li class="nav-item">
-          <router-link v-if="currentUser" to="/user" class="nav-link">User</router-link>
-        </li>
-      </div>
 
-      <div v-if="!currentUser" class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <router-link to="/register" class="nav-link">
-            <font-awesome-icon icon="user-plus" /> Sign Up
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/login" class="nav-link">
-            <font-awesome-icon icon="sign-in-alt" /> Login
-          </router-link>
-        </li>
-      </div>
+        <div v-if="!currentUser" class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <router-link to="/register" class="nav-link">
+              <font-awesome-icon icon="user-plus" /> Sign Up
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/login" class="nav-link">
+              <font-awesome-icon icon="sign-in-alt" /> Login
+            </router-link>
+          </li>
+        </div>
 
-      <div v-if="currentUser" class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <router-link to="/profile" class="nav-link">
-            <font-awesome-icon icon="user" />
-            {{ currentUser.username }}
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" @click.prevent="logOut">
-            <font-awesome-icon icon="sign-out-alt" /> LogOut
-          </a>
-        </li>
+        <div v-if="currentUser" class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <router-link to="/profile" class="nav-link">
+              <font-awesome-icon icon="user" />
+              {{ currentUser.username }}
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" @click.prevent="logOut">
+              <font-awesome-icon icon="sign-out-alt" /> LogOut
+            </a>
+          </li>
+        </div>
       </div>
     </nav>
 
@@ -57,6 +64,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      currentTime: new Date().toLocaleTimeString()
+    };
+  },
   computed: {
     currentUser() {
       return this.$store.state.auth.user;
@@ -74,6 +86,12 @@ export default {
       this.$store.dispatch('auth/logout');
       this.$router.push('/login');
     }
+  },
+  created() {
+    setInterval(() => {
+      this.currentTime = new Date().toLocaleTimeString();
+    }, 1000);
+
   }
 };
 </script>
@@ -93,5 +111,24 @@ export default {
 }
 .content-router-app {
   margin-top: 55px;
+}
+.current-time-area {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 22px;
+  padding: 0 10px;
+}
+.current-time-area span {
+  padding-left: 10px;
+}
+.user-handle {
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+.nav-link.img-logo {
+  padding: 0;
+}
+.nav-link.img-logo img {
+  height: 40px;
 }
 </style>
