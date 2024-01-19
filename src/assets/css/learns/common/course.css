@@ -147,6 +147,7 @@ a {
 }
 .title-child {
     padding-top: 10px;
+    padding-bottom: 5px;
 }
 .text-content p {
   margin: 10px 0;
@@ -168,4 +169,10 @@ a {
 }
 .name-table code {
   font-size: 1.2em;
+}
+.link-refer {
+  color: #5488c7;
+}
+.link-refer:hover {
+  text-decoration: underline;
 }
