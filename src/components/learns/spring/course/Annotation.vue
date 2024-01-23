@@ -5,7 +5,7 @@
         <h5 class="title-child">Vòng Đời của Bean</h5>
         <div class="text-content">
             <div class="image-content-course">
-                <img style="width: 100%;" src="@/assets/image/learns/spring/bean.png">
+                <img style="width: 100%;" src="@/assets/image/learns/spring/bean.jpg">
             </div>
             <ul style="list-style:auto;">
                 <li>Khi class được đánh dấu annotation, IoC sẽ tìm và khởi tạo.</li>

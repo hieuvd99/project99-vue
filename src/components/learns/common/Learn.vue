@@ -3,7 +3,7 @@
       <div class="content">
         <li>
           <router-link to="/learn/blog">
-            <img class="image-course" src="@/assets/image/learns/blog/blog.png">
+            <img class="image-course" src="@/assets/image/learns/blog/blog.jpg">
             <p class="text-course">Blog</p>
           </router-link>
         </li>
@@ -15,13 +15,13 @@
         </li>
         <li>
           <router-link to="/learn/spring" >
-            <img class="image-course" src="@/assets/image/learns/spring/spring.png">
+            <img class="image-course" src="@/assets/image/learns/spring/spring.jpg">
             <p class="text-course">Spring</p>
           </router-link>
         </li>
         <li>
           <router-link to="/learn/vuejs">
-            <img class="image-course" src="@/assets/image/learns/vuejs/vuejs.png">
+            <img class="image-course" src="@/assets/image/learns/vuejs/vuejs.jpg">
             <p class="text-course">VueJS</p>
           </router-link>
         </li>

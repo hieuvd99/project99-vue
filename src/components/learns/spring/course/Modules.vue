@@ -3,7 +3,7 @@
         <h1 class="title-content-course">Modules</h1>
         <p class="text-content">Spring Framework được chia thành khoảng 20 modules.</p>
         <div class="image-content-course">
-            <img src="@/assets/image/learns/spring/modules.png">
+            <img src="@/assets/image/learns/spring/modules.jpg">
         </div>
 
         <h5 class="title-child">Core Container</h5>

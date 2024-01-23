@@ -12,7 +12,7 @@
             </ul>
         </div>
         <div class="image-content-course">
-            <img src="@/assets/image/learns/spring/mvc.png">
+            <img src="@/assets/image/learns/spring/mvc.jpg">
         </div>
 
         <h5 class="title-child">Luồng hoạt động</h5>
